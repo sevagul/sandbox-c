@@ -3,17 +3,16 @@
 
 int main(void)
 {
-	unsigned int n;
-	unsigned int x, y, z, t;
+	unsigned n, x, y, z, t;
 	printf("vvedite chislo: ");
 	scanf("%u", &n);
 
 	printf("2, ");
 	t=1;
-	for (x=3; t<n; x=x+2)
+	for (x=3; t<n; x+=2)
 	{
 		z = 1;
-		for (y=3; y<x/2; y=y+2)
+		for (y=3; y<x/2; y+=2)
 		{
 			if (x%y == 0)
 			{
@@ -23,7 +22,7 @@ int main(void)
 		}
 		if (z)
 		{
-			t = t+1;
+			t++;
 			printf("%u, ", x);
 		}
 	}
