@@ -12,7 +12,7 @@ int main(void)
 	for (x=3; t<n; x+=2)
 	{
 		z = 1;
-		for (y=3; y<x/2; y+=2)
+		for (y=3; y*y <= x; y+=2)
 		{
 			if (x%y == 0)
 			{
