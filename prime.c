@@ -13,11 +13,12 @@ int main(void)
 	for (x=3; t<n; x=x+2)
 	{
 		z = 1;
-		for (y=3; y<x/2 && z; y=y+2)
+		for (y=3; y<x/2; y=y+2)
 		{
 			if (x%y == 0)
 			{
 				z = 0;
+				break;
 			}
 		}
 		if (z)
