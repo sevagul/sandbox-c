@@ -3,13 +3,15 @@
 
 int main(void)
 {
-	unsigned n, x, y, z, t;
+	unsigned n, x, y, z, t, k;
 	printf("vvedite chislo: ");
 	scanf("%u", &n);
-
-	printf("2, ");
-	t=1;
-	for (x=3; t<n; x+=2)
+	if (n!=1)
+		printf("2, ");
+	else
+		printf("2.\n");
+	t=2; k=2;
+	for (x=3; t<n+1; x+=2)
 	{
 		z = 1;
 		for (y=3; y*y <= x; y+=2)
@@ -22,8 +24,31 @@ int main(void)
 		}
 		if (z)
 		{
+			if (k!=10)
+			{
+				if (t!=n)
+				{
+					printf("%u, ", x);
+				}
+				else
+				{
+					printf("%u.\n", x);
+				}
+			}
+			else
+			{
+				if (t!=n)
+				{
+					printf("%u,\n", x);
+					k=0;
+				}
+				else
+				{
+					printf("%u.\n", x);
+				}
+			}
 			t++;
-			printf("%u, ", x);
+			k++;
 		}
 	}
 
